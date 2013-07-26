@@ -3,7 +3,7 @@ import sys
 import urllib2
 
 SOLR_URL = "http://localhost:8983/solr/update/json"
-NER_SERVER = "http://192.168.1.31:8080/"
+NER_SERVER = "http://localhost:8080/"
 
 def tweets():
     with open(sys.argv[1]) as f:
@@ -15,6 +15,10 @@ def value_for_path(path, tweet):
     for f in path.split("/"):
         if isinstance(value, list):
             return [v[f] for v in value]
+        if f == 'coordinates' and value[f] is not None:
+            clist = value[f]['coordinates']
+            coordinate = "%s,%s" % (clist[1], clist[0])
+            return coordinate
         if value is None:
             return None
         try:

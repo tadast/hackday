@@ -107,6 +107,9 @@
    -->
 
    <field name="coordinates" type="location" indexed="true" stored="true" required="false" multiValued="false"/>
+
+   <dynamicField name="*_coordinate"  type="tdouble" indexed="true" stored="false"/>
+
    <field name="created_at" type="date" indexed="true" stored="true" required="false" multiValued="false"/>
 
    <field name="entity_hashtag_text" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
@@ -125,31 +128,31 @@
 
    <field name="in_reply_to_screen_name" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
 
-   <field name="retweet_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="retweet_count" type="int" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="retweeted" type="boolean" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="retweeted" type="boolean" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="source" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="source" type="string" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="text" type="text_en" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="text" type="text_en" indexed="true" stored="true" required="false" multiValued="false"/>
 
    <field name="truncated" type="boolean" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_description" type="text_en" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_description" type="text_en" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_favourites_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_favourites_count" type="int" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_followers_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_followers_count" type="int" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_friends_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_friends_count" type="int" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_name" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_name" type="string" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_screen_name" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_screen_name" type="string" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_id" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_id" type="int" indexed="true" stored="true" required="false" multiValued="false"/>
 
-   <field name="user_location_name" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_location_name" type="string" indexed="true" stored="true" required="false" multiValued="false"/>
 
    <field name="user_statuses_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
 
