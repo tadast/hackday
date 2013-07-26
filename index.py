@@ -1,5 +1,6 @@
 import json
 import sys
+import urllib2
 
 SOLR_URL = "http://localhost:8983/solr/update/json"
 
@@ -30,13 +31,14 @@ def value_for_path(path, tweet):
     return value
 
 
-
 for tweet in tweets():
     doc = {}
     for path, field in map.iteritems():
         value = value_for_path(path, tweet)
         doc[field] = value
-    print doc
 
-
-
+    solrReq = urllib2.Request(SOLR_URL, json.dumps([doc]))
+    solrReq.add_header("Content-Type", "application/json")
+    solrPoster = urllib2.urlopen(solrReq)
+    response = solrPoster.read()
+    solrPoster.close()
