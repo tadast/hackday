@@ -129,8 +129,6 @@
 
    <field name="retweeted" type="boolean" indexed="true" stored="true" required="false" multiValued="true"/>
 
-   <field name="retweeted" type="boolean" indexed="true" stored="true" required="false" multiValued="true"/>
-
    <field name="source" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
 
    <field name="text" type="text_en" indexed="true" stored="true" required="false" multiValued="true"/>
@@ -142,8 +140,6 @@
    <field name="user_favourites_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
 
    <field name="user_followers_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
-
-   <field name="user_friends_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
 
    <field name="user_friends_count" type="int" indexed="true" stored="true" required="false" multiValued="true"/>
 
@@ -161,7 +157,7 @@
 
    <field name="user_url" type="string" indexed="true" stored="true" required="false" multiValued="true"/>
 
-   <field name="verified" type="boolean" indexed="true" stored="true" required="false" multiValued="true"/>
+   <field name="user_verified" type="boolean" indexed="true" stored="true" required="false" multiValued="true"/>
 
    <field name="_version_" type="long" indexed="true" stored="true"/>
 
