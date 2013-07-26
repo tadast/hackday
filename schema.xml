@@ -178,6 +178,8 @@
        RESTRICTION: the glob-like pattern in the name attribute must have
        a "*" only at the start or the end.  -->
 
+    <dynamicField name="ner_*"  type="string"    indexed="true"  stored="true" multiValued="true"/>
+
  </fields>
 
 
